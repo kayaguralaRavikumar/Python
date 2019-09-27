@@ -24,4 +24,43 @@ cd Scripts
 activate  
 deactivate
 
-''' 
+'''
+
+#pandas
+'''
+pandas  
+1. Dataframe - 2D   
+2. Series  - 1D  
+'''
+
+#web framework
+'''
+bottle -- Micro 
+flask  -- Micro 
+
+Django -->MVT
+
+Template engine are used to run python code in HTMl page  
+Bottle - .tpl   - STE  - % stmt1  %for % end {{variable}}
+Flask  - .hmtl  - JINJA2 - {% stml %} {%for%} {%endfor%} {{variable}}
+Django - .hmtl  - OWN 
+
+TEMPLATE_PATH - bottle  
+for flask and django requires 
+templates-folder 
+'''
+
+# Kind of Work
+'''
+1.Automation / scripts
+2.Web Dev 
+3.Cloud 
+---------------------------AI-------------------------------
+4.Health Care Predication 
+5.Real estate  
+6.Banking ,Pizza ,transport all the customer analysis 
+7.Super market  
+
+'''
+
+

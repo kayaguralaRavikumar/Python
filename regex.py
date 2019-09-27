@@ -20,27 +20,27 @@ f = u.urlopen(myurl)
 
 # regex  values
 '''
-\d --> digit 
-\D --> non digit 
+\d --> digit
+\D --> non digit
 . --> any character \. to use strict  or [.]
-{} -->  quantifier 
-[0-9] --> \d 
+{} -->  quantifier
+[0-9] --> \d
 modifiers - will work with combination of pattern
-* --> 0  or more  
-+ --> 1 or more 
-? --> 0 or one 
-* --> only  *  
-\d* ---> now *  have value 
-\s --> space 
-\S --> non-space 
+* --> 0  or more
++ --> 1 or more
+? --> 0 or one
+* --> only  *
+\d* ---> now *  have value
+\s --> space
+\S --> non-space
 \w --> word collect [0-9a-zA-Z_]
 \W --> non word [^0-9a-zA-Z_]
-^  --> matter when put first  , end  it will be same ^  
+^  --> matter when put first  , end  it will be same ^
 r[ea]{2}d
 r[ea]+d
 r[ea]*d
 r[ea]?d
-greed operator 
+greed operator
 '''
 
 for line in f:
@@ -76,3 +76,18 @@ wt.writerow(['IP','Date','pics','Url'])
 for line in result :
     wt.writerow(line)
 f.close()
+
+import pandas as pd
+
+l1 = [[10, 20, 30], [40, 50, 60]]
+l2 = list([[10, 20, 30], [40, 50, 60]])
+df1 = pd.DataFrame([[10, 20, 30], [40, 50, 60]], index=['r1', 'r2'], columns=['c1', 'c2', 'c3'])
+print(l1, l2, df1, sep='\n')
+
+df2 = pd.DataFrame(result)
+df2.to_csv('out5.csv',index=None,header=['Ip', 'Date', 'pics', 'URL'])
+df2.to_excel('outp6.xlsx')
+df2.to_json('out7.json')
+cur.execute('select * from logdata')
+df3 = pd.DataFrame(cur)
+df3.to_csv('out8.csv')
